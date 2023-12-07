@@ -33,7 +33,6 @@ export const RawSendTxButton = () => {
 
       console.log("address", address);
       const tx = await signer.sendTransaction({
-        from: address,
         to: CELO_EDITION_DROP_CONTRACT_ADDRESS,
         data: contract.contract?.encoder.encode("claim", claimArgs),
         value: 0,
